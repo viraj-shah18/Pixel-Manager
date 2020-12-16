@@ -24,6 +24,9 @@ copy = " Selected File: "
 options = " c : copy, m : move, k : create file, g : create folder, v : paste"
 search_files_path = os.getcwd()+"/search_files"
 
+if not os.path.exists(search_files_path):
+    os.makedirs(search_files_path)
+
 # Main class
 class FileManager:
     """ 
@@ -134,7 +137,7 @@ class FileManager:
 
             if key==118 and self.a==1 and not self.terminal:
                 # copy the file/self.folder in buffer to current directory
-                self.menu,self.listings,self.l,self.cur_row,self.a = copy_cur(self.stdscr,self.fold,self.folder,self.folder_to_be_copied,self.h, self.w,self.path)
+                self.menu,self.listings,self.l,self.cur_row,self.a = copy_cut(self.stdscr,self.fold,self.folder,self.folder_to_be_copied,self.h, self.w,self.path)
 
             # select current file/folder for moving
             if key==ord("m") and self.bb==0 and not self.terminal:
@@ -467,42 +470,8 @@ def main(stdscr):
     then restore to starting directory
 """
 curses.wrapper(main)
-# while 1:
-#     try:
-#         curses.wrapper(main)
-#     except:
-#         if not let_me_exit:
-#             os.chdir(search_files_path[:-13])
-#         else:
-#             exit()
-#         pass
 
 
 
 
-
-
-"""Ignore comments below"""
-# Previewer
-# if key == ord("p"):
-#                 self.cur_row = start_editor(self.stdscr,self.menu[self.cur_row-1],self.cur_row)
-#                 print_menu(self.stdscr, self.listings, self.cur_row-1, "", self.menu)
-#                 for i in range(1,self.h-2):
-#                     self.stdscr.addstr(i,self.w-self.wn," "*self.wn,curses.color_pair(11))
-#                 curses.init_pair(3, 3, 55)
-
-# Night Mode
-#CHECKfile
-            # if key==110 and not self.terminal: # Night Mode
-            #     if night==0:
-            #         curses.init_pair(2, curses.COLOR_WHITE, 161)
-            #         curses.init_pair(3, curses.COLOR_WHITE, 1)
-            #         night = 1
-            #     else:
-            #         curses.init_pair(2, curses.COLOR_WHITE, 18)
-            #         curses.init_pair(3, curses.COLOR_WHITE, 27)
-            #         night = 0
-            #     self.stdscr.refresh()
 # os.system("wmctrl -r ':ACTIVE:' -b toggle,fullscreen")
-# time.sleep(2)
-# Some string definitions

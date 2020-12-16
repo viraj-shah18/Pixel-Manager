@@ -20,6 +20,9 @@ def show_stat(stdscr,file,dira):
     """
     h,w = stdscr.getmaxyx()
     wn = 37
+    if (w<wn*2):
+        return
+
     if file=="Empty Folder":
         for i in range(2,10):
             stdscr.addstr(i,w-wn," "*wn,curses.color_pair(11))

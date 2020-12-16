@@ -17,7 +17,7 @@ search = "Ctrl + S to search: "
 options = " c : copy, m : move, k : create file, g : create folder, v : paste"
 
 
-def copy_cur(stdscr,fold,folder,folder_to_be_copied,h,w,path):
+def copy_cut(stdscr,fold,folder,folder_to_be_copied,h,w,path):
     """
         This function copies a file or a folder to current folder and updates the screen with current directory contents
         stdscr : standard screen
@@ -167,6 +167,8 @@ def scrolldown(stdscr,cur_row,menu):
 
 # relative to bottom left, print options
 def option(stdscr,h,w):
+    if w<100:
+        return
     x = w-76-2*w//5
     curses.init_pair(70,curses.COLOR_WHITE,23)
     stdscr.addstr(h-1,0," "*(w-1),curses.color_pair(15))

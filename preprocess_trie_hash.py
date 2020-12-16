@@ -96,60 +96,23 @@ def prog(stdscr,h,w,kk):
         curses.init_pair(200,2,25)
         for i in range(10):
             stdscr.addstr(0,0," "*w,curses.color_pair(1))
-		# time.sleep(2)/
         stdscr.refresh()
         for i in range(0,w-1):
-            if i==5:
-                stdscr.addstr(0,i,"      ",curses.color_pair(200))
-            elif i==4:
-                stdscr.addstr(0,i,"     ",curses.color_pair(200))
-            elif i==3:
-                stdscr.addstr(0,i,"    ",curses.color_pair(200))
-            elif i==2:
-                stdscr.addstr(0,i,"   ",curses.color_pair(200))	
-            elif i==1:
-                stdscr.addstr(0,i,"  ",curses.color_pair(200))	
-            elif i==0:
-                stdscr.addstr(0,i," ",curses.color_pair(200))
-            elif i<=w-6:
-                stdscr.addstr(0,i,"      ",curses.color_pair(200))
-            elif i==w-5:
-                stdscr.addstr(0,i,"     ",curses.color_pair(200))
-            elif i==w-4:
-                stdscr.addstr(0,i,"    ",curses.color_pair(200))
-            elif i==w-3:
-                stdscr.addstr(0,i,"   ",curses.color_pair(200))	
-            elif i==w-2:
-                stdscr.addstr(0,i,"  ",curses.color_pair(200))	
-            elif i==w-1:
-                stdscr.addstr(0,i," ",curses.color_pair(200))
+            if i<=5:
+                stdscr.addstr(0,i," "*(i+1),curses.color_pair(200))
+            elif i>=(w-5):
+                stdscr.addstr(0,i," "*(w-i),curses.color_pair(200))
+            else:
+                stdscr.addstr(0,i," "*6,curses.color_pair(200))
             stdscr.refresh()
             if kk.values()[0]:
                 break
             time.sleep(0.03)
-            if i==5:
-                stdscr.addstr(0,i,"      ",curses.color_pair(100))
-            elif i==4:
-                stdscr.addstr(0,i,"     ",curses.color_pair(100))
-            elif i==3:
-                stdscr.addstr(0,i,"    ",curses.color_pair(100))
-            elif i==2:
-                stdscr.addstr(0,i,"   ",curses.color_pair(100))	
-            elif i==1:
-                stdscr.addstr(0,i,"  ",curses.color_pair(100))	
-            elif i==0:
-                stdscr.addstr(0,i," ",curses.color_pair(100))
-            elif i<=w-6:
-                stdscr.addstr(0,i,"      ",curses.color_pair(100))
-            elif i==w-5:
-                stdscr.addstr(0,i,"     ",curses.color_pair(100))
-            elif i==w-4:
-                stdscr.addstr(0,i,"    ",curses.color_pair(100))
-            elif i==w-3:
-                stdscr.addstr(0,i,"   ",curses.color_pair(100))	
-            elif i==w-2:
-                stdscr.addstr(0,i,"  ",curses.color_pair(100))	
-            elif i==w-1:
-                stdscr.addstr(0,i," ",curses.color_pair(100))
+            if i<=5:
+                stdscr.addstr(0,i," "*(i+1),curses.color_pair(100))
+            elif i>=(w-5):
+                stdscr.addstr(0,i," "*(w-i),curses.color_pair(100))
+            else:
+                stdscr.addstr(0,i," "*6,curses.color_pair(100))
             stdscr.refresh()
     
