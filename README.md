@@ -226,8 +226,15 @@ After pressing enter on one of the paths, you will be redirected to that locatio
 ---  
 
 ### TODO list
+- [x] Bind Delete, Home and End key
 - [ ] Clean code
-- [ ] Bind Delete, Home and End key
 - [ ] Undo/Redo in editor
 - [ ] Folder-Wise Trie building and processing
 - [ ] Fuzzy search within editor
+
+
+#### Known Issues
+- [ ] Error with backspace after bracket autocomplete
+- [ ] Not able to navigate during find
+- [ ] Find phrase length more than allocated space
+- [ ] Single replace

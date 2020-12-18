@@ -1,4 +1,8 @@
 {
+    "LANGUAGES_SUPPORTED":[
+        "py",
+        "cpp"
+    ],
     "COLOR_BLUE": {
         "py": " in | and | or | not |def |class |self",
         "cpp": " && | || | ~ | void | int | double | float | vector "
