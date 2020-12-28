@@ -1,0 +1,28 @@
+{
+    "LANGUAGES_SUPPORTED":[
+        "py",
+        "cpp"
+    ],
+    "COLOR_BLUE": {
+        "py": " in | and | or | not |def |class |self",
+        "cpp": " && | || | ~ | void | int | double | float | vector "
+    },
+    "COLOR_GREEN": {
+        "py": {
+            "single_line":"#.*",
+            "multi_line" :"\"\"\"(.*)?\\s?(.*)?\"\"\""
+        },
+        "cpp":{
+            "single_line":"\\\\",
+            "multi_line" :"\\*.*"
+        }
+    },
+    "COLOR_PINK": {
+        "py": "import |from |for |while | range|if |else |elif |return ",
+        "cpp": "for|while|if |else |else if |return "
+    },
+    "COLOR_ORANGE": {
+        "py": "\"(.*?)\"",
+        "cpp": "\"(.*?)\""
+    }
+}

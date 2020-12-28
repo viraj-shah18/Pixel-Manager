@@ -65,17 +65,15 @@ Pixel Manager
 The main window of the File Manager provides an easy way to navigate through any files and directories on the system. The **left panel** shows the contents of the current directory, and highlights the selected content with green color. The **center panel** is for search window and shows the contents of the selected directory (if not a file). The right panel shows stats of the selected file/directory along with CPU and RAM usage. Here is the preview of the main window:
 <div><center>File Manager Main window</center></div>
 
-![](https://i.imgur.com/8Lg3hDT.png)
+![](images/basic_manager.png)
 
-
-<!-- ![](https://i.imgur.com/DWGzr99.png) -->
 
 
 Navigate using the arrow keys!
 Right key opens to the selected directory and left key moves back to the previous directory.
 <div><center>Scrolling through current directory</center></div>
 
-![](https://i.imgur.com/cVEDObI.png)
+![](images/manager_scroll.png)
 
 The bottom row bar displays all the possible commands to **copy, move, delete and create new** files and folders, **search** through directories, and start the **Terminal!**
 
@@ -88,9 +86,8 @@ It can run all Linux commands and system calls. It can also execute user defined
 Here's a preview of how it looks:
 <div><center>Terminal Preview</center></div>
 
-![](https://i.imgur.com/ZyAFvJ3.jpg)
+![](images/terminal_out.jpg)
 
-<!-- ![](https://i.imgur.com/uEXrgoD.png) -->
 
 The input can be given at the bottom most line and the output will be presented in the **Terminal Output** panel. The terminal panel becomes *orange* if your program is still executing. The terminal also supports scrolling if the output is more than the screen size.
 
@@ -101,16 +98,16 @@ To edit files on the go, navigate to the file and pressing ```e``` would open th
 The current editor is customized for python files, highlighting keywords, adding indentation spaces and auto-completing brackets and strings.
 <div><center>Editor Preview</center></div>
 
-![Editor Screenshot](https://i.imgur.com/Xk9uae3.png)
+![Editor Screenshot](images/editor_basic_ss.png)
 
 The editor currently also supports cut/copy/paste and find-replace utilities. Following are the screenshots for the same.
 <div><center>Selecting Lines</center></div>
 
-![Selecting Files](https://i.imgur.com/K8Y5SRk.png)
+![Selecting Files](images/visual_mode.png)
 
 <div><center>Highlighting the found words</center></div>
 
-![Highlighting the found words](https://i.imgur.com/anyautJ.png)
+![Highlighting the found words](images/high_found.png)
 
 
 ---
@@ -120,31 +117,31 @@ To enable the search bar, enter `ctrl + a`. It initiates a trie creation from th
 Here is a preview of search!
 <div><center>Search Preview</center></div>
 
-![](https://i.imgur.com/IpmRXbI.png)
+![](images/progress_bar.png)
 
 The top bar shows the trie creation process!
 
 Here is how searching looks:
 <div><center>Searching through files/folders</center></div>
 
-![](https://i.imgur.com/cX3IztT.png)
+![](images/on_search.png)
 
-It can search for thousands of files giving results instantly. Scroll and navigate through the found items. The **search_files** folder must be present in the Pixel File Manager Directory to store the pickle files created after intiating search. 
+It can search for thousands of files giving results instantly. Scroll and navigate through the found items. The **search_files** folder stores the pickle files created after intiating search. 
 <div><center>Scrolling through results</center></div>
 
-![](https://i.imgur.com/SgiqbB5.png)
+![](images/search_all_res0.png)
 
 
 When searching, top right corner shows the number of search results.
 Scrolling through the search results and then pressing enter will take you to the paths on which the actual file/folder is present.
 <div><center>After selecting result, scrolling through the locations where result appear</center></div>
 
-![](https://i.imgur.com/WdlxUxB.png)
+![](images/search_all_res.png)
 
 After pressing enter on one of the paths, you will be redirected to that location.
 <div><center>Search implementation flowchart</center></div>
 
-![](https://i.imgur.com/BVEKoFP.png)
+![](images/trie_chart.png)
 
 ---
 ## **List of All Commands** <a name="cmds"></a>
@@ -186,8 +183,8 @@ After pressing enter on one of the paths, you will be redirected to that locatio
 | Command  | Action       |
 | -------- | ------------ |
 | `e`      | Start editor |
-| `Ctrl+F` | Find         |
-| `Ctrl+R` | Replace Text |
+| `Ctrl+f` | Find         |
+| `Ctrl+r` | Replace Text |
 | `Escape` | Enter Command Mode|
 
 **Command Mode**
@@ -217,13 +214,27 @@ After pressing enter on one of the paths, you will be redirected to that locatio
 ---
 ## **Some Statistics** <a name="stats"></a>
 
-![](https://i.imgur.com/QwRTwxc.png)
+![](images/stats.png)
 .
 
      
 
-![](https://i.imgur.com/9mACGxs.png)
+![](images/compare.png)
 
 ---
 ### <div><center>[Link to the Presentation](https://drive.google.com/file/d/1FU9KvMKyhQhalqbKgY0ikj8BSvyUCex4/view?usp=sharing) </div></center>
----
+---  
+
+### TODO list
+- [x] Bind Delete, Home and End key
+- [ ] Clean code
+- [ ] Undo/Redo in editor
+- [ ] Folder-Wise Trie building and processing
+- [ ] Fuzzy search within editor
+
+
+#### Known Issues
+- [ ] Error with backspace after bracket autocomplete
+- [ ] Not able to navigate during find
+- [ ] Find phrase length more than allocated space
+- [ ] Single replace
